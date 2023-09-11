@@ -30,14 +30,14 @@ class Acti_ViewInfo : AppCompatActivity() {
         setContentView(binding.root)
 
         val getSharedPreferences  = getSharedPreferences("member",Context.MODE_PRIVATE)
-        val room = getSharedPreferences.getString("numberRoom",null)
-        val user = getSharedPreferences.getString("user",null)
+        val cuDan = getSharedPreferences.getString("cuDan",null)
         val gson = Gson()
-        var info = gson.fromJson(user, cuDan_apartment::class.java)
+        var info = gson.fromJson(cuDan, cuDan_apartment::class.java)
         binding.name.text = info.getNameCdan()
         binding.age.text = info.getAge()
         binding.phone.text = info.getPhone()
         binding.cccd.text =info.getCardIdNumber()
-        binding.room.text = room
+
+        binding.room.text = getSharedPreferences.getString("room",null)
     }
 }

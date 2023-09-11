@@ -22,6 +22,7 @@ import com.example.nhom6_datn.API_Service.API_Service
 import com.example.nhom6_datn.Change_Language.Language_Manager
 import com.example.nhom6_datn.Model.Model__teset
 import com.example.nhom6_datn.Model.User_Change_Pass
+import com.example.nhom6_datn.Model.cuDan_apartment
 import com.example.nhom6_datn.R
 import com.example.nhom6_datn.Retrofit.ServiceGenator
 import com.example.nhom6_datn.util.shower
@@ -163,10 +164,11 @@ class Frag_Profile : Fragment() {
 
     private fun readInfoToken(nameMember:TextView,roomMember:TextView){
         val getSharedPreferences  = this.requireActivity().getSharedPreferences("member",Context.MODE_PRIVATE)
-        val name = getSharedPreferences.getString("name",null).toString()
-        val numberRoom = getSharedPreferences.getString("numberRoom",null).toString()
-        nameMember.text = name
-        roomMember.text =  "Số phòng: "+numberRoom
+        val cuDan = getSharedPreferences.getString("cuDan",null)
+        val gson = Gson()
+        var info = gson.fromJson(cuDan, cuDan_apartment::class.java)
+        nameMember.text = info.getNameCdan()
+        roomMember.text = "Số phòng "+ getSharedPreferences.getString("room",null)
     }
 
 

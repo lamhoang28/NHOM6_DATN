@@ -11,7 +11,7 @@ class cuDan_apartment :java.io.Serializable{
     private  var birthDate:String
     private  var gender:Boolean
     private  var representative:Boolean
-    private lateinit var apartment: Any
+    private lateinit var apartment: Apartment
 
     constructor(
         id: Int,
@@ -48,7 +48,7 @@ class cuDan_apartment :java.io.Serializable{
     fun getAge():String{
         return birthDate
     }
-    fun getApartment():Any{
+    fun getApartment():Apartment{
         return apartment
     }
     fun getPhone():String{

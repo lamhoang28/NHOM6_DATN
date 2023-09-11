@@ -90,7 +90,7 @@ class Frag_Home : Fragment() {
 //        statistical.setOnClickListener {
 //            startActivity(Intent(context,Acti_Statistical::class.java))
 //        }
-        callReposn(token)
+        onResponse(token)
     }
     @SuppressLint("SimpleDateFormat", "SetTextI18n")
     private fun checkDate(textView: TextView,imageView: ImageView){
@@ -118,7 +118,7 @@ class Frag_Home : Fragment() {
         shimmerFrameLayout = view.findViewById(R.id.Frag_home_ShimmerFrameLayout)
     }
 
-    private fun callReposn(token:String){
+    private fun onResponse(token:String){
         val serviceGenator = ServiceGenator().builService(API_Service::class.java)
         val call = serviceGenator.getPost("*/*",token)
         call.enqueue(object :retrofit2.Callback<MutableList<Model_News>>{
@@ -162,14 +162,20 @@ class Frag_Home : Fragment() {
                 call.enqueue(object : retrofit2.Callback<cuDan_apartment>{
                     override fun onResponse(call: Call<cuDan_apartment>, response: Response<cuDan_apartment>) {
                         if (response.isSuccessful){
-
                             val gson = Gson()
-                            var apartment = response.body()?.getApartment()
-                            Log.e(TAG, "onResponse: "+apartment)
 
-
-
+                            val model = response.body()?.getApartment()
+                            Log.e(TAG, "onResponse: "+response.body()?.getApartment())
                             nameMember.text = response.body()?.getNameCdan()
+                            roomMember.text = "Số phòng "+model?.getNumberOfRooms().toString()
+
+                            val sharedPreferences = requireContext().getSharedPreferences("member",Context.MODE_PRIVATE)
+                            val editor = sharedPreferences.edit()
+                            val cuDan = response.body() as cuDan_apartment
+                            val infoCuDan = gson.toJson(cuDan)
+                            editor.putString("cuDan",infoCuDan)
+                            editor.putString("room",model?.getNumberOfRooms().toString())
+                            editor.apply()
                 }
             }
 
