@@ -34,11 +34,6 @@ interface API_Service {
         @Header("accept") accept:String,@Header("Authorization") passW:String
     ):Call<MutableList<Model_News>>
 
-    @POST("/newsComment")
-    fun comment(
-        @Body comment: User_Comment
-    ):Call<List<Model_Comment>>
-
     @GET ("/newsCommentApi/{id}")
     fun getApiComment(
         @Path("id") _id:Int

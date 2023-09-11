@@ -165,20 +165,11 @@ class Frag_Home : Fragment() {
 
                             val gson = Gson()
                             var apartment = response.body()?.getApartment()
-                            //var model = gson.fromJson(apartment.toString().trim(),Apartment::class.java)
                             Log.e(TAG, "onResponse: "+apartment)
 
-                            val sharedPreferences = requireActivity().getSharedPreferences("member",Context.MODE_PRIVATE)
-                            val editor = sharedPreferences.edit()
-                           // editor.putString("name",response.body()?.getNameCdan())
-                           // editor.putString("numberRoom",apartment.getNumberOfRooms().toString())
-                           // val user = response.body() as cuDan_apartment
-                           // editor.putString("user",gson.toJson(user))
 
-                           // editor.apply()
 
                             nameMember.text = response.body()?.getNameCdan()
-                            //roomMember.text = "Số phòng: "+ apartment.getNumberOfRooms().toString()
                 }
             }
 
