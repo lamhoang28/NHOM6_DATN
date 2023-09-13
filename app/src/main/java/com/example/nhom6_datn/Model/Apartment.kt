@@ -1,22 +1,15 @@
 package com.example.nhom6_datn.Model
 
-class Apartment {
-    private var id:Int
-    private var apartmentNumber:String
-    private var area:Int
-    private var numberOfRooms:Int
-    private var status:Boolean
-
-    constructor(id: Int, apartmentNumber: String, area: Int, numberOfRooms: Int, status: Boolean) {
-        this.id = id
-        this.apartmentNumber = apartmentNumber
-        this.area = area
-        this.numberOfRooms = numberOfRooms
-        this.status = status
-    }
-
-
-    fun getNumberOfRooms():Int{
-        return numberOfRooms
-    }
-}
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+@Parcelize
+data class Apartment(
+    val apartmentNumber: String,
+    val area: Int,
+    val bills: List<Bill>,
+    val id: Int,
+    val numberOfRooms: Int,
+    val persons: List<Person>,
+    val services: List<Service>,
+    val status: Boolean
+):Parcelable

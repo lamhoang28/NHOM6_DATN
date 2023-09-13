@@ -22,10 +22,19 @@
 
     <string name="home_Service">Dịch vụ</string>
     <string name="home_History">Lịch sử thanh toán</string>
+    <string name="home_Bill">Hóa đơn</string>
     <string name="home_reportService">Báo lỗi dịch vụ</string>
     <string name="home_Repair">Sửa chữa</string>
     <string name="home_EmergencyIncident">Sự cố khẩn cấp</string>
     <string name="home_News">Tin tức</string>
+    <string name="ngay">Ngày : </string>
+    <string name="tien_dien">Tiền Điện : </string>
+    <string name="tien_nuoc">Tiền Nước : </string>
+    <string name="phu_phi_khac">Các Phụ Phí Khác : </string>
+    <string name="tong_chi_phi">Tổng Chi Phí : </string>
+    <string name="so_phong">Số Phòng : </string>
+    <string name="ten_chu_ho">Tên Chủ Hộ : </string>
+    <string name="so_dien_thoai">Số Điện Thoại : </string>
 
 
     <string name="home_Manage_Admin">Quản lý</string>

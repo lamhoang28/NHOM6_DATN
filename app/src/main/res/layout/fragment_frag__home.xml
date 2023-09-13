@@ -133,6 +133,18 @@
                 android:textStyle="bold"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Frag_home_AppCompatButton_bill"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:layout_margin="6sp"
+                android:drawableLeft="@drawable/ic_bill"
+                android:paddingStart="9sp"
+                android:text="@string/home_Bill"
+                android:textColor="@color/color_DA"
+                android:background="@drawable/boder_item"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Frag_home_AppCompatButton_error"
                 android:layout_width="match_parent"
                 android:layout_height="60sp"

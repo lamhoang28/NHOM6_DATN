@@ -19,10 +19,19 @@
     <string name="hello_Profile_PM">Good evening !!!</string>
     <string name="home_Service">Service</string>
     <string name="home_History">History</string>
+    <string name="home_Bill">Bill</string>
     <string name="home_reportService">Report service error</string>
     <string name="home_Repair">Repair</string>
     <string name="home_EmergencyIncident">Emergency incident</string>
     <string name="home_News">News</string>
+    <string name="ngay">Date:</string>
+    <string name="tien_dien">Electricity Bill : </string>
+    <string name="tien_nuoc">Water Bill : </string>
+    <string name="phu_phi_khac">Other Fees : </string>
+    <string name="tong_chi_phi">Total Cost : </string>
+    <string name="so_phong">Room Number : </string>
+    <string name="ten_chu_ho">Householder Name : </string>
+    <string name="so_dien_thoai">Phone Number : </string>
 
     <string name="home_Manage_Admin">Manage</string>
     <string name="home_Statistical_Admin">Statistical</string>

@@ -40,6 +40,7 @@ import kotlin.collections.ArrayList
 class Frag_Home : Fragment() {
     private lateinit var service:Button
     private lateinit var news:Button
+    private lateinit var btnBill:Button
 
     private lateinit var linearLayoutManager:LinearLayoutManager
     private lateinit var recyclerView: RecyclerView
@@ -87,6 +88,10 @@ class Frag_Home : Fragment() {
         service.setOnClickListener {
             startActivity(Intent(context,Acti_Manager::class.java))
         }
+        btnBill.setOnClickListener {
+            startActivity(Intent(context,ActivityBill::class.java))
+        }
+
 //        statistical.setOnClickListener {
 //            startActivity(Intent(context,Acti_Statistical::class.java))
 //        }
@@ -112,6 +117,7 @@ class Frag_Home : Fragment() {
     private fun call(view: View){
         service = view.findViewById(R.id.Frag_home_AppCompatButton_service)
         news = view.findViewById(R.id.Frag_home_AppCompatButton_news)
+        btnBill = view.findViewById(R.id.Frag_home_AppCompatButton_bill)
         linearLayoutManager = LinearLayoutManager(context,RecyclerView.VERTICAL,false)
         recyclerView= view.findViewById(R.id.RecyclerView)
         recyclerView.layoutManager = linearLayoutManager
