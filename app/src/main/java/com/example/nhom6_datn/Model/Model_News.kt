@@ -16,8 +16,8 @@ class Model_News :java.io.Serializable{
     }
 
 
-    fun getId_news():Int{
-        return id
+    fun getType():Int{
+        return type
     }
     fun getTitle():String{
         return title

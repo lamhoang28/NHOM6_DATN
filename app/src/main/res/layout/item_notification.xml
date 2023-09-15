@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/itemNews_news"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12sp"
+    app:cardElevation="1sp"
+    android:layout_margin="3sp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="9dp"
+        android:padding="6dp"
+        android:background="#eaf2fd">
+        <ImageView
+            android:id="@+id/itemNews_player"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="9dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/itemNews_player"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/itemNews_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="33"
+                android:text="androidx.cardview.widget.CardView"
+                android:textColor="#575757"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemNews_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="9dp"
+                android:text="Phần mềm được xem là tốt khi khi nó có kiến trúc tốt. Kiến trúc phần mềm tương tự như móng nhà, móng yếu nhà sẽ không vững. Để viết được phần mềm tốt bạn phải học rất nhiều, điều đầu tiên bạn cần biết là SOLID."
+                android:maxLength="70"
+                android:textColor="#919294"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/itemNews_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_toEndOf="@+id/itemNews_player"
+            android:text="01:02 28/10/2000"
+            android:maxLength="30"
+            android:textColor="@color/black"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
