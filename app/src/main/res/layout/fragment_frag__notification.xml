@@ -16,16 +16,42 @@
         android:textStyle="bold"
         android:background="@color/color_DA"/>
 
-    <ImageView
-        android:layout_width="300sp"
-        android:layout_height="300sp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/notfound"
-        />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/Notification_ShimmerFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
+            <include layout="@layout/item_notification_load"/>
+
+            <include layout="@layout/item_notification_load" />
+
+            <include layout="@layout/item_notification_load" />
+
+            <include layout="@layout/item_notification_load" />
+
+            <include layout="@layout/item_notification_load" />
+
+            <include layout="@layout/item_notification_load" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/Notification_SwipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </LinearLayout>
