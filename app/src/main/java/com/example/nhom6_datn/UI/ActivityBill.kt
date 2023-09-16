@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.nhom6_datn.API_Service.API_Service
 import com.example.nhom6_datn.Model.BillResponse
 import com.example.nhom6_datn.Model.cudan
@@ -37,24 +38,24 @@ class ActivityBill : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<BillResponse?>, response: Response<BillResponse?>) {
                 if (response.isSuccessful && response.body() != null) {
-                         val billResponse=response.body()
-                    with(binding){
+                    val billResponse = response.body()
+                    with(binding) {
                         billResponse?.apply {
-                            tvDay.text=billDate
-                            tvElectricity.text=electricityNumber.toString()
-                            tvWater.text=waterNumber.toString()
-                            tvOther.text="888"
-                            tvTotal.text=(electricityNumber+waterNumber).toString()
-                            tvRoom.text=apartment.numberOfRooms.toString()
-                            tvHouseholderName.text=apartment.persons[0].name
-                            tvPhone.text=apartment.persons[0].phoneNumber
+                            tvDay.text = billDate
+                            tvElectricity.text = electricityNumber.toString()
+                            tvWater.text = waterNumber.toString()
+                            tvOther.text = "888"
+                            tvTotal.text = (electricityNumber + waterNumber).toString()
+                            tvRoom.text = apartment.numberOfRooms.toString()
+                            tvHouseholderName.text = apartment.persons[0].name
+                            tvPhone.text = apartment.persons[0].phoneNumber
                         }
                     }
                 }
             }
 
             override fun onFailure(call: Call<BillResponse?>, t: Throwable) {
-
+                Log.e("DMM", t.message.toString())
             }
         })
     }

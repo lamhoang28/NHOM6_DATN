@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class Bill(
     val billDate: String,
     val electricityNumber: Int,
-    val feeTypes: List<Int>,
+    val feeTypes: List<FeeTypeX>,
     val id: Int,
     val paidDate: String,
     val status: Boolean,

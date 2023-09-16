@@ -17,8 +17,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nhom6_datn.API_Service.API_Service
-import com.example.nhom6_datn.Model.Apartment
-import com.example.nhom6_datn.Model.Model__teset
 import com.example.nhom6_datn.Model.Model_News
 import com.example.nhom6_datn.Model.cuDan_apartment
 import com.example.nhom6_datn.Model.cudan
@@ -28,7 +26,6 @@ import com.example.nhom6_datn.Retrofit.ServiceGenator
 import com.example.nhom6_datn.UI.Manager.Acti_Manager
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.gson.Gson
-import com.google.gson.JsonParser
 import io.reactivex.disposables.CompositeDisposable
 import retrofit2.Call
 import retrofit2.Response

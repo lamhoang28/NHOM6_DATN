@@ -4,9 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Service(
+data class FeeTypeX(
     val id: Int,
-    val message: String,
-    val status: Int,
-    val type: Int
+    val name: String,
+    val price: Int
 ):Parcelable
